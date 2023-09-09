@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        text-align: center;
+        margin-top: 50px;
+    }
+</style>
+
+<body>
+    <h1>Upload an Image</h1>
+    <form method="POST" enctype="multipart/form-data" action="/upload">
+        <input type="file" name="file">
+        <input type="submit" value="Submit">
+    </form>
+    
+    <ul class="list-group">
+        {% for image in uploaded_images %}
+            <li class="list-group-item">
+                <a href="{{ url_for('display_image', filename=image) }}">{{ image }}</a>
+                <form method="POST" action="{{ url_for('delete_image', filename=image) }}" style="display: inline;">
+                    <input type="submit" value="Delete" class="btn btn-danger btn-sm">
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+    <a href="/logout" class="logout-button">Logout</a>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
