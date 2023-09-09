@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload and List</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .login-container {
+            margin: 0 auto;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .form-input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .google-logo {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .form-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="login-container" id="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <input class="form-input" type="text" id="username" placeholder="Username" disabled>
+            <input class="form-input" type="password" id="password" placeholder="Password" disabled>
+            <a href="/google-login" class="btn btn-lg btn-google" disabled>
+                <img src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-webinar-optimizing-for-success-google-business-webinar-13.png"
+                    alt="Google Logo" class="google-logo">Login with Google
+            </a>
+        </form>
+    </div>
+</body>
+
+</html>
